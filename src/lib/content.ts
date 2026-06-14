@@ -20,12 +20,13 @@ export const site = {
 };
 
 export const nav = [
-  { label: "Philosophy", href: "#philosophy" },
-  { label: "Voyage", href: "#voyage" },
-  { label: "Journey", href: "#journey" },
-  { label: "Expertise", href: "#expertise" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Connect", href: "#connect" },
+  { label: "Philosophy", href: "/#philosophy" },
+  { label: "Voyage", href: "/#voyage" },
+  { label: "Journey", href: "/#journey" },
+  { label: "Expertise", href: "/#expertise" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "CV", href: "/cv" },
+  { label: "Connect", href: "/#connect" },
 ];
 
 export const hero = {
@@ -453,5 +454,117 @@ export const connect = {
     "Ultra-luxury hotel & cruise opportunities",
     "VIP & private household service",
     "Guest experience consultation",
+  ],
+};
+
+export type CvRole = {
+  company: string;
+  location: string;
+  role: string;
+  period: string;
+  bullets: string[];
+};
+
+// Full curriculum vitae, verbatim from Christian's CV (2026) and certificates.
+export const cv = {
+  profile:
+    "Accomplished and service-driven Butler / Suite Ambassador with extensive experience in ultra-luxury hospitality across yachts, cruise lines, and five-star hotels. Renowned for discretion, attention to detail, and personalized guest service. Proven ability to anticipate guest needs, resolve concerns proactively, and deliver exceptional experiences that enhance guest satisfaction and brand loyalty.",
+  competencies: [
+    "Exceptional guest relations and personalized service",
+    "Flexible across extended and rotational hours",
+    "Strong attention to detail and organization",
+    "Excellent communication and interpersonal ability",
+    "Works independently and collaboratively",
+    "Composed and effective under pressure",
+  ],
+  experience: [
+    {
+      company: "The Ritz-Carlton Yacht Collection",
+      location: "Worldwide",
+      role: "Suite Ambassador / Butler",
+      period: "January 2025 — Present",
+      bullets: [
+        "Deliver bespoke, end-to-end personalized service, anticipating and fulfilling guest preferences and special requests.",
+        "Build authentic guest relationships to create memorable and meaningful experiences.",
+        "Provide concierge services, including destination expertise, shore-excursion coordination, and activity planning.",
+        "Maintain meticulous attention to detail, tracking guest preferences, special occasions, and personalized touches.",
+        "Manage in-suite food and beverage service, including dining arrangements, special dietary needs, wine recommendations, and beverage service.",
+      ],
+    },
+    {
+      company: "Silversea Cruises",
+      location: "Ultra-Luxury Cruising",
+      role: "Butler",
+      period: "June 2023 — December 2023",
+      bullets: [
+        "Prepared and maintained luxury suites in alignment with guest preferences and historical profiles.",
+        "Replenished in-suite amenities, private bars, and fruit displays, and delivered guest correspondence.",
+        "Proactively monitored guest satisfaction, swiftly resolving concerns to exceed expectations.",
+        "Coordinated suite cleaning, turndown service, and bed preparation with suite attendants.",
+        "Managed in-suite dining, afternoon tea, canapé service, and private in-suite events.",
+        "Provided packing and unpacking services and coordinated guest laundry within set timelines.",
+        "Ensured pantries consistently met USPH standards.",
+      ],
+    },
+    {
+      company: "Caesars Palace",
+      location: "Dubai, UAE",
+      role: "Butler",
+      period: "August 2018 — June 2023",
+      bullets: [
+        "Delivered high-touch butler services to VIP and long-stay guests in a luxury hotel environment.",
+        "Conducted daily guest check-ins to assess satisfaction and update preferences.",
+        "Performed in-room check-ins, escorted guests to suites, and secured payments for accommodation and extras.",
+        "Practiced discretion and professionalism while entering guest suites.",
+        "Supported revenue generation through tactful upselling of premium products and wines.",
+        "Coordinated closely with room service for timely delivery of amenities and F&B requests.",
+      ],
+    },
+    {
+      company: "The Oberoi",
+      location: "Dubai, UAE",
+      role: "Waiter",
+      period: "July 2014 — July 2018",
+      bullets: [
+        "Provided refined dining service, guiding guests through menus and recommending dishes to taste.",
+        "Executed table settings and service standards in line with luxury dining expectations.",
+        "Took and served food and beverage orders while promoting upselling opportunities.",
+      ],
+    },
+    {
+      company: "The Panari Hotel",
+      location: "Nairobi, Kenya",
+      role: "Assistant Waiter",
+      period: "January 2013 — June 2014",
+      bullets: [
+        "Assisted in setting up dining areas, including tables, silverware, and glassware.",
+        "Supported service staff by taking orders, serving food and beverages, and replenishing supplies.",
+        "Cleared tables efficiently and addressed basic guest needs promptly.",
+      ],
+    },
+  ] as CvRole[],
+  certifications: [
+    "STCW Basic Safety, Crowd Management & Security Awareness training (valid)",
+    "Certificate in Butler & Hospitality Services",
+    "Valid Seaman's Book",
+    "Valid C1/D Visa",
+    "Forbes Travel Guide Five-Star team member (2026)",
+  ],
+  education: [
+    {
+      title: "Certificate in Food & Beverage Operations",
+      place: "Kenya Utalii College",
+      year: "2012",
+    },
+    {
+      title: "Kenya Certificate of Secondary Education (K.C.S.E.)",
+      place: "Mbale High School",
+      year: "2011",
+    },
+  ],
+  personal: [
+    { label: "Nationality", value: "Kenyan" },
+    { label: "Languages", value: "Swahili, Fluent English" },
+    { label: "Availability", value: "Worldwide placements" },
   ],
 };

@@ -35,7 +35,7 @@ export default function Navbar() {
     >
       <nav className="mx-auto flex max-w-editorial items-center justify-between px-6 py-5 md:px-10">
         <a
-          href="#top"
+          href="/"
           className={`group flex flex-col leading-none transition-colors ${
             solid ? "text-charcoal" : "text-ivory"
           }`}
@@ -69,7 +69,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#connect"
+            href="/#connect"
             className={`btn-ghost ${
               solid ? "text-champagne-deep" : "text-ivory"
             } hover:bg-champagne hover:text-charcoal hover:border-champagne`}

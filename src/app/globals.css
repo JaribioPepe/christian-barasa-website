@@ -155,6 +155,41 @@
   }
 }
 
+/* Print: produce a clean CV PDF via the browser's "Save as PDF" */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    background: #fff !important;
+  }
+  /* Reveal animations leave content at opacity:0 until scrolled into view —
+     force everything visible so the whole CV prints regardless of scroll. */
+  * {
+    opacity: 1 !important;
+    transform: none !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .cv-sheet {
+    max-width: none !important;
+    padding: 0 1rem !important;
+  }
+  .cv-role,
+  .cv-block,
+  article,
+  li {
+    break-inside: avoid;
+  }
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}
+
 /* Slim champagne scrollbar */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #efe9df; }

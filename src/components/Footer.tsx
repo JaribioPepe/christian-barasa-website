@@ -68,7 +68,7 @@ export default function Footer() {
             Luxury Hospitality · Worldwide
           </p>
           <a
-            href="#top"
+            href="/#top"
             className="nav-link text-ivory/55 transition-colors hover:text-champagne-light"
           >
             Back to top ↑
