@@ -16,7 +16,7 @@ export const site = {
   nationality: "Kenyan",
   languages: ["Swahili", "Fluent English"],
   // Live deployment. If a custom domain is added later, update this one line.
-  url: "https://christian-barasa-website.vercel.app",
+  url: "https://christianbarasa.vercel.app",
 };
 
 export const nav = [
