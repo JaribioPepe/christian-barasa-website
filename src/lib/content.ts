@@ -15,7 +15,8 @@ export const site = {
   location: "Available worldwide · Based in Nairobi, Kenya",
   nationality: "Kenyan",
   languages: ["Swahili", "Fluent English"],
-  url: "https://christianbarasa.com",
+  // Live deployment. If a custom domain is added later, update this one line.
+  url: "https://christian-barasa-website.vercel.app",
 };
 
 export const nav = [
