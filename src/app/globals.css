@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charcoal: #1a1a1a;
+  --ivory: #f8f6f2;
+  --champagne: #c8a96a;
+  --stone: #8c8780;
+  color-scheme: light;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans;
+    font-feature-settings: "kern", "liga", "calt";
+  }
+
+  ::selection {
+    background: var(--champagne);
+    color: #fff;
+  }
+
+  /* Headings default to the display serif */
+  h1, h2, h3, h4 {
+    @apply font-display;
+    font-weight: 500;
+  }
+
+  /* Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* Tracked small-caps label used to title every section */
+  .eyebrow {
+    @apply font-sans uppercase text-champagne-deep;
+    font-size: 0.72rem;
+    letter-spacing: 0.32em;
+    font-weight: 500;
+  }
+
+  .eyebrow-light {
+    @apply eyebrow text-champagne;
+  }
+
+  /* Thin index numeral that precedes a section title */
+  .section-index {
+    @apply font-serif text-champagne;
+    font-size: 0.95rem;
+    letter-spacing: 0.2em;
+  }
+
+  .display-xl {
+    font-size: clamp(2.6rem, 7vw, 6rem);
+    line-height: 0.98;
+    letter-spacing: -0.01em;
+  }
+
+  .display-lg {
+    font-size: clamp(2.1rem, 4.6vw, 3.9rem);
+    line-height: 1.04;
+    letter-spacing: -0.005em;
+  }
+
+  .lede {
+    @apply font-serif text-stone;
+    font-size: clamp(1.2rem, 2vw, 1.55rem);
+    line-height: 1.55;
+    font-weight: 400;
+  }
+
+  /* Hairline divider in champagne */
+  .hairline {
+    @apply block bg-champagne/50;
+    height: 1px;
+  }
+
+  /* Gold-outline pill button */
+  .btn-ghost {
+    @apply inline-flex items-center gap-3 font-sans uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    padding: 1rem 2rem;
+    border: 1px solid currentColor;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .btn-solid {
+    @apply inline-flex items-center gap-3 font-sans uppercase bg-champagne text-charcoal;
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    padding: 1rem 2.2rem;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .btn-solid:hover {
+    @apply bg-champagne-deep text-ivory;
+  }
+
+  /* Animated gold underline for nav links */
+  .nav-link {
+    @apply relative font-sans uppercase;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+@layer utilities {
+  /* Subtle film grain to keep large flat areas from feeling digital */
+  .grain::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.04;
+    z-index: 1;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Vertical writing for side rails */
+  .vertical-rl {
+    writing-mode: vertical-rl;
+  }
+}
+
+/* Slim champagne scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #efe9df; }
+::-webkit-scrollbar-thumb {
+  background: #cdbfa3;
+  border: 3px solid #efe9df;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--champagne); }
