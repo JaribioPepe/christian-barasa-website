@@ -54,7 +54,7 @@ export default function Gallery() {
           intro={gallery.intro}
         />
 
-        <div className="mt-16 columns-2 gap-4 md:columns-3 lg:columns-4 [&>*]:mb-4">
+        <div className="mt-16 columns-2 gap-4 md:columns-3 lg:columns-4 [&>*]:mb-4 [&>*]:break-inside-avoid">
           {images.map((img, i) => (
             <Reveal key={img.src + i} delay={(i % 4) * 0.05}>
               <button
