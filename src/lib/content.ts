@@ -40,6 +40,22 @@ export const hero = {
   image: "/images/yacht-aerial.jpg",
 };
 
+// The portrait feature — introduces the professional with quiet authority.
+export const signature = {
+  eyebrow: "The Professional",
+  title: "Trusted with the extraordinary.",
+  statement:
+    "Over more than a decade aboard the world's finest yachts, ultra-luxury cruise lines, and five-star hotels, Christian has earned the confidence of guests who accept nothing less than perfection. Discreet, intuitive, and tireless in pursuit of the flawless detail, he is, quite simply, exceptional at what he does.",
+  stats: [
+    { value: "13+", label: "Years of Service" },
+    { value: "5", label: "Distinguished Houses" },
+    { value: "Five-Star", label: "Forbes Travel Guide" },
+  ],
+  placard: "Christian Mark Barasa",
+  caption: "Butler · Suite Ambassador · Guest Experience",
+  portrait: "/images/christian-portrait.jpg",
+};
+
 export const philosophy = {
   index: "01",
   eyebrow: "My Philosophy of Service",

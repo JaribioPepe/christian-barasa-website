@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import ScrollProgress from "@/components/ScrollProgress";
 import Hero from "@/components/Hero";
+import Portrait from "@/components/Portrait";
 import Philosophy from "@/components/Philosophy";
 import GlobalVoyage from "@/components/GlobalVoyage";
 import CareerJourney from "@/components/CareerJourney";
@@ -54,6 +55,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <Portrait />
         <Philosophy />
         <GlobalVoyage />
         <CareerJourney />
