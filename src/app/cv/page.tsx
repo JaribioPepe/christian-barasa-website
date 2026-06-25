@@ -43,6 +43,9 @@ export default function CvPage() {
                 <a href={`tel:${site.phoneHref}`} className="hover:text-champagne-deep">
                   {site.phone}
                 </a>
+                <a href={site.url} className="text-champagne-deep hover:text-champagne">
+                  {site.url.replace(/^https?:\/\//, "")}
+                </a>
                 <span>{site.location}</span>
               </div>
             </div>
